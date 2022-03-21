@@ -1,11 +1,9 @@
 from django.http import Http404
-from django.shortcuts import render
-from flask import Response
 from rest_framework import status
+from rest_framework.response import Response
 from rest_framework.views import APIView
-
 from dogs.serializers import DogSerializer, BreedSerializer
-from models import Dog
+from dogs.models import Dog, Breed
 
 
 class DogList(APIView):
